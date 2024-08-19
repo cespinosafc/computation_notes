@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{xcolor}
+\usepackage{soul}
+\title{Ejemplo del uso de colores}
+\author{Carlos Espinosa}
+\date{\today}
+
+\begin{document}
+   \maketitle
+
+   \setulcolor{red}
+   Se pueden poner colores tanto al \textcolor{red}{texto} como de \colorbox{orange}{fondo}. \ul{Existen maneras de subrayar texto con un color específico usando el paquete \emph{soul}.}
+   \setulcolor{purple}
+   \ul{Incluso se puede cambiar el color en medio de un párrafo.}
+
+   Se puede usar la opción \textbf{dvipsnames}, \textbf{svgnames} o {x11names} para agregar muchos más colores.
+\end{document}

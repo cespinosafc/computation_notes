@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{biblatex}
+\addbibresource{biblio.bib}
+\geometry{letterpaper, margin=2.5cm}
+
+\begin{document}
+  Una de las formas más comunes de derivar la formula general para polinomios de segundo grado es completando el trinomio cuadrado perfecto a la ecuación general de segundo grado, como se puede ver en \cite{rich2004schaum}. Empezemos con la forma más general de una ecuación de segundo grado
+  \begin{equation}
+    ax^2+bx+c = 0.
+    \label{eq:gen_eq}
+  \end{equation}
+
+  Por medio de una manipulación algebráica, a la ec. \ref{eq:gen_eq} le quitamos el coeficiente al término $x^2$ y dejamos del mismo lado todos los términos que dependan de la variable $x$:
+
+  \begin{align}
+    ax^2+bx+c &=0\nonumber\\
+    x^2+\frac{b}{a}x+\frac{c}{a}&=0\nonumber\\
+    x^2 + \frac{b}{a}x &=-\frac{c}{a}.
+  \label{eq:gen_alg_mod}
+  \end{align} 
+
+  El lado izquierdo de la ec. \ref{eq:gen_alg_mod} tiene la forma $ x^2+2kx $ por lo que podemos completar el cuadrado tal que $ x^2+2kx+k^2=(x+k)^2 $. En este caso tenemos que sumar $ (b/2a)^2 $ a ambos lados de la ec. \ref{eq:gen_alg_mod}:
+  \begin{align}
+    x^2 + 2 \left(\frac{b}{2a} \right)x\left(\frac{b}{2a} \right) ^2 &= -\frac{c}{a}+\left(\frac{b}{2a} \right)^2\nonumber\\
+    \left(x+\frac{b}{2a} \right)^2 &= \frac{b^2-4ac}{4a^2}.
+  \end{align}
+  
+  De esta última ecuación podemos despejar la variable $ x $ tal que
+
+  \begin{align}
+    x + \frac{b}{2a}&=\pm \frac{\sqrt{b^2-4ac}}{2a},\\
+    x_{1,2} &= \frac{-b\pm\sqrt{b^2-4ac}}{2a},
+  \end{align}
+  dando como resultado la formula general de segundo grado.
+
+  El cálculo de las raíces de un polinomio de segundo grado puede calcularse de diversas maneras \parencite{prasolov1997elliptic, goualard:hal-04116310}.
+
+  \printbibliography
+\end{document}
